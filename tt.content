@@ -1,0 +1,52 @@
+<!DOCTYPE html>  
+<html lang="en">  
+<head>  
+    <meta charset="UTF-8">  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+    <title>Welcome to JamboPay</title>  
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp,container-queries"></script>  
+</head>  
+<body class="flex flex-col items-center justify-center h-screen bg-wheat-500 m-2 font-Geogia,Times New Roman">  
+
+    <h1 class="font-Geogia,Times New Roman text-blue-800 text-5xl uppercase underline cursor-pointer">Welcome to JamboPay</h1>  
+
+    <div class="flex  gap-8 mt-7 mb-9 h-17 p-2  rounded-circle">  
+        <div class="button p-4 border-4 border-green-600 rounded-full bg-lavender text-green cursor-pointer justify-center" onclick="selectButton(this)">Top Up Account</div>  
+        <div class="button p-4 border-4 border-green-600 rounded-full bg-white text-green cursor-pointer flex" onclick="selectButton(this)">Pay</div>  
+        <div class="button p-4  border-4 border-green-600 rounded-full bg-wheat text-green cursor-pointer" onclick="selectButton(this)">Send Money</div>  
+        <div class="button p-4  border-4 border-green-600 rounded-full bg-wheat text-green cursor-pointer" onclick="selectButton(this)">Bill Payment</div>  
+    </div>  
+
+    <table class="mt-20 w-1/2 max-w-2xl bg-teal-500 cursor-pointer border-collapse">  
+        <thead>  
+            <tr class="bg-black text-2xl text-blue-500 uppercase">  
+                <th class="border-4 border-gray-400 p-3 text-center text-green bg-blue table-container hover:bg-green-800">Service</th>  
+                <th class="border-4 border-gray-400 p-3 text-center text-aqua bg-blue hover:bg-red-600">Amount</th>  
+            </tr>  
+        </thead>  
+        <tbody>  
+            <tr class="hover:bg-teal-600">  
+                <td class="border-4 hover:bg-green-700 border-gray-400 p-3 text-center text-lavender">Airtime</td>  
+                <td class="border-4 hover:bg-red-600 border-gray-400 p-3 text-center text-lavender">Ksh 15,000</td>  
+            </tr>  
+            <tr class="hover:bg-teal-600">  
+                <td class="border-4 border-gray-400 p-3 text-center text-lavender hover:bg-blue-800">Pay TV</td>  
+                <td class="border-4 border-gray-400 p-3 text-center text-lavender hover:bg-green-800">Ksh 35,000</td>  
+            </tr>  
+            <tr class="hover:bg-teal-600">  
+                <td class="border-4 border-gray-400 p-3 text-center text-lavender hover:bg-orange-500">Data</td>  
+                <td class="border-4 border-gray-400 p-3 text-center text-lavender hover:bg-green-800">Ksh 50,000</td>  
+            </tr>  
+        </tbody>  
+    </table>  
+
+    <script>  
+        function selectButton(button) {  
+            const buttons = document.querySelectorAll('.button');  
+            buttons.forEach(btn => btn.classList.remove('bg-red-600', 'text-gold', 'border-blue-500'));  
+            button.classList.add('bg-red-600', 'text-gold', 'border-blue-500');  
+        }  
+    </script>  
+
+</body>  
+</html>
